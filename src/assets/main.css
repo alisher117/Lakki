@@ -2,6 +2,7 @@ body{
 	background-color: #febfda;
 	overflow-x: hidden;
 	box-sizing: border-box;
+	padding-top: env(safe-area-inset-top);
 }
 #app{
 	overflow-x: hidden;
