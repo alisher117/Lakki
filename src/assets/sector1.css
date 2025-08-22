@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+.sector1 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    max-width: 1400px;
+    animation: slideIn 1s forwards;
+}
+
+
+.modalWindowWelcome {
+    max-width: 600px;
+    animation: popUpWord 2s ease-in-out forwards;
+}
+
+.modalWindowWelcome h1 {
+    font-size: clamp(2rem, 5vw, 6rem);
+    text-align: left;
+    margin: 0;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.modalWindowWelcome h3{
+    font-family: "Gelasio", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.dogThumbnail {
+    max-width: 100%;
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+    animation: slideIn 1s forwards;
+    margin-left: 40px;
+}
+
+@keyframes popUpWord {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 500px){
+    .contentWrapper{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .dogThumbnail {
+        max-width: 100%;
+        width: 120vw;
+        height: auto;
+        object-fit: contain;
+        animation: slideIn 1s forwards;
+    }
+    .modalWindowWelcome h1 {
+        text-align: center;
+        font-size: 5em;
+    }
+}
+@media screen and (max-width: 1000px){
+    .contentWrapper{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .dogThumbnail {
+        max-width: 100%;
+        width: 70vw;
+        height: auto;
+        object-fit: contain;
+        animation: slideIn 1s forwards;
+    }
+    .modalWindowWelcome h1 {
+        text-align: center;
+        font-size: 5em;
+    }
+}

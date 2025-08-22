@@ -1,0 +1,9 @@
+body{
+	background-color: #febfda;
+	overflow-x: hidden;
+	box-sizing: border-box;
+}
+#app{
+	overflow-x: hidden;
+	background-color: #febfda;
+}
